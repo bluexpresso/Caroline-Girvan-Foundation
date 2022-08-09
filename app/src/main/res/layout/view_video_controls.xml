@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="#50000000">
+
+  <androidx.appcompat.widget.AppCompatImageView
+    android:id="@+id/exo_play"
+    android:layout_width="80dp"
+    android:layout_height="match_parent"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:srcCompat="@drawable/ic_twotone_play_circle_24"
+    app:tint="#ffffff" />
+
+  <androidx.appcompat.widget.AppCompatImageView
+    android:id="@+id/exo_pause"
+    android:layout_width="80dp"
+    android:layout_height="match_parent"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:srcCompat="@drawable/ic_twotone_pause_circle_filled_24"
+    app:tint="#FFFFFF" />
+  <View
+    android:id="@+id/mask_play_pause"
+    android:layout_width="80dp"
+    android:layout_height="80dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+  <com.google.android.material.textview.MaterialTextView
+    android:id="@+id/btn_speed"
+    style="@style/TextAppearance.MaterialComponents.Headline5"
+    android:layout_width="40dp"
+    android:layout_height="40dp"
+    android:layout_marginHorizontal="16dp"
+    android:gravity="center"
+    android:text="1x"
+    android:textColor="@color/white"
+    app:iconTint="@color/white"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toStartOf="@id/btn_replay"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:rippleColor="@color/teal_200" />
+  <androidx.appcompat.widget.AppCompatImageView
+    android:id="@+id/btn_forward"
+    android:layout_width="40dp"
+    android:layout_height="40dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toStartOf="@id/btn_more"
+    app:layout_constraintStart_toEndOf="@id/mask_play_pause"
+    app:layout_constraintTop_toTopOf="parent"
+    app:srcCompat="@drawable/ic_baseline_forward_10_24"
+    app:tint="@color/white" />
+  <androidx.appcompat.widget.AppCompatImageView
+    android:id="@+id/btn_replay"
+    android:layout_width="40dp"
+    android:layout_height="40dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toStartOf="@id/mask_play_pause"
+    app:layout_constraintStart_toEndOf="@id/btn_speed"
+    app:layout_constraintTop_toTopOf="parent"
+    app:srcCompat="@drawable/ic_baseline_replay_10_24"
+    app:tint="@color/white" />
+  <androidx.appcompat.widget.AppCompatImageView
+    android:id="@+id/btn_more"
+    android:layout_width="40dp"
+    android:layout_height="40dp"
+    android:layout_marginHorizontal="16dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toEndOf="@id/btn_forward"
+    app:layout_constraintTop_toTopOf="parent"
+    app:srcCompat="@drawable/ic_baseline_more_horiz_24"
+    app:tint="@color/white" />
+  <com.google.android.exoplayer2.ui.DefaultTimeBar
+    android:id="@+id/exo_progress"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp"
+    android:layout_marginStart="8dp"
+    app:buffered_color="#212121"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:played_color="@color/white"
+    app:scrubber_color="@color/white"
+    app:unplayed_color="@android:color/white" />
+</androidx.constraintlayout.widget.ConstraintLayout>
